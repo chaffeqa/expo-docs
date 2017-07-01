@@ -17,6 +17,8 @@ title: Configuration with app.json
 
 `app.json` was previous referred to as `exp.json`, but for consistency with [Create React Native App](https://github.com/react-community/create-react-native-app) it has been consolidated under one file. If you are converting your app from using `exp.json` to `app.json`, all you need to do is add an `"expo"` key at the root of `app.json`, as the parent of all other keys.
 
+The `"expo"` key is accessible via [`Expo.Constants.manifest`](../sdk/constants.html#expoconstantsmanifest) and therefore is the perfect place to place your custom app configuration (see the `"extra"` key below).
+
 The following is a list of properties that are available for you under the `"expo"` key in `app.json`:
 
 
@@ -148,7 +150,7 @@ The following is a list of properties that are available for you under the `"exp
 
 - `extra`
 
-   Any extra fields you want to pass to your experience.
+   Any extra fields you want to pass to your experience. Values are accessible via `Expo.Constants.manifest.extra` ([read more](../sdk/constants.html#expoconstantsmanifest)).
 
 - `rnCliPath`
 
